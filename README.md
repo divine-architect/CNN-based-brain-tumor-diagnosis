@@ -4,7 +4,12 @@ Website and machine learning model to diagnose different types of tumors from MR
 My submission to Skynet Hacks
 
 ## Run locally
-
+Run this locally on your machine
+### Dependecies
+`pip install cython pillow>=7.0.0 numpy>=1.18.1 opencv-python>=4.1.2 torch>=1.9.0 --extra-index-url https://download.pytorch.org/whl/cpu torchvision>=0.10.0 --extra-index-url https://download.pytorch.org/whl/cpu pytest==7.1.3 tqdm==4.64.1 scipy>=1.7.3 matplotlib>=3.4.3 mock==4.0.3`
+and Flask
+`pip install imageai --upgrade`
+assuming you're on CPU, for GPU check out the Image AI GitHub linked below.
 ```sh
 git clone https://github.com/divine-architect/CNN-based-brain-tumor-diagnosis.git
 cd CNN-based-brain-tumor-diagnosis
