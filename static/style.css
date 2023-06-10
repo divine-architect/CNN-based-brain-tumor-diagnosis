@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: 
+         url('main.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: MyWebFont;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:25px;
+}
+.mainbody{
+    padding-left:50px;
+    padding-right:50px;
+   
+}
+.logo{
+    height:200px;
+    width:300px;
+}
+h3{
+    background-color: black;
+    color: aqua;
+}
+a{
+    background-color: black;
+    color: hotpink;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+mark{
+    background-color: black;
+    color: aqua;
+}

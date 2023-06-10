@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<header>
+<title>
+    🧠 CNN based tumor diagnosis
+</title>
+
+<link rel="stylesheet" href="/static/style.css">
+</header>
+
+<body>
+<h1>
+  <center> 🧠 CNN based brain tumor diagnosis</center> 
+</h1><hr style="padding-left:50px; padding-right:50px;">
+<div class="mainbody">
+<mark>
+    <b>
+        <br>
+        About
+    </b>
+</mark>
+<p>
+    This website uses a custom trained model to diagnose MRI scans of human brains in order to recognise brain tumors in MRI scan of brains. If done early, death and other complications can be prevented.
+    This serves as a tool and not actual medical advice! This tool can recognise different types of tumors as well; These include: Gioma, Pituitary and Meningioma
+
+</p>
+
+<mark>
+    <b>How?</b>
+</mark>
+
+<p>
+    I used Image AI, a Python library to train a model based on 3000+ images of brains with different types of brain tumors and without brain tumors, I used the dense-net 121 CNN deep-learning framework.
+    The model was trained on my own hardware as opposed to a Jupyter notebook. It was trained on 100 epochs in 32 batches. The Image AI library has a PyTorch backend and hence it was really easy for me to train this model.
+    You can train the model yourself with the <mark><code>trainer.py</code> </mark>file from the GitHub. Or you can simply download it from the webserver thorugh <a href="/static/model.pt">this</a> link.
+</p>
+
+
+<mark>
+    <b>Why?</b>
+</mark>
+
+<p>This project is made as a submission to Skynet Hacks, the theme was "Social Good", I think this fits the theme as early diagnosis of brain tumors can help save lives.
+
+</p>
+
+<mark>
+    <b>Technical details for nerds 🤓</b>
+</mark>
+<p>
+    
+    For this project, a CNN-based architecture was selected for its ability to extract features from images effectively. The architecture consisted of multiple convolutional layers, pooling layers, and fully connected layers. By learning hierarchical representations of brain MRI scans, the model could detect intricate patterns and tumor-associated features. Training involved supervised learning and backpropagation, optimizing the network's weights and biases to differentiate between tumor and non-tumor images. The loss function, typically cross-entropy, was minimized to improve prediction accuracy. Techniques like dropout and early stopping addressed overfitting, and cross-validation helped assess performance and determine hyperparameter settings. Iterative training continued until satisfactory performance was achieved on both the training and validation datasets.
+</p>
+
+<mark><b>Real world applications</b></mark>
+<p>
+    The trained brain tumor detection model can be deployed in real-world healthcare settings to assist medical professionals in the early detection of brain tumors. By analyzing brain MRI scans, the model can quickly and accurately identify suspicious regions that require further examination. This aids in reducing the time and effort required for manual review, enabling medical practitioners to prioritize and focus on critical cases.
+
+Moreover, the model can also be integrated into medical imaging systems to provide real-time feedback during the scanning process, enhancing the efficiency and accuracy of brain tumor detection.
+</p>
+
+<mark><b><h3>Links and resources/docs</h3></b></mark>
+<p>
+    <ul>
+        <li>
+            <a href="https://imageai.readthedocs.io/en/latest/">Image AI documentation</a>
+        </li>
+        <li>
+            <a href="https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri">Dataset used for tumor detection and classification</a>
+        </li>
+
+    </ul>
+</p>
+<hr>
+<mark></mark>
+<center>
+<div>
+    <h1>Upload a MRI scan of a brain</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file1"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    {% if i and j %}
+    <h2>Prediction Result:</h2>
+    <p>{{ i }}</p>
+    <p>{{ j }}</p>
+    {% endif %}
+</div></center>
+</div>
+</body>
+
+<footer>
+
+</footer>
