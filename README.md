@@ -31,7 +31,7 @@ For this project, a CNN-based architecture was chosen due to its effectiveness i
 ## Real-World Applications
 The trained brain tumor detection model can be deployed in real-world healthcare settings to assist medical professionals in the early detection of brain tumors. By analyzing brain MRI scans, the model can quickly and accurately identify suspicious regions that require further examination. This helps reduce the time and effort required for manual review, allowing medical practitioners to prioritize and focus on critical cases. Furthermore, the model can be integrated into medical imaging systems to provide real-time feedback during the scanning process, thereby enhancing the efficiency and accuracy of brain tumor detection.
 
-For more information, please refer to the website.
+For more information, please refer to the website by running it locally
 
 ## Links
 https://imageai.readthedocs.io/en/latest/ --> Image AI \
